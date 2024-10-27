@@ -1,4 +1,4 @@
-name: Build OpenWRT-IPQ-2 for AX6
+name: Build OpenWRT-IPQ-1 for AX6
 
 on:
   workflow_dispatch:
@@ -98,11 +98,6 @@ jobs:
       working-directory: ./
       run: |
         git clone $REPO_URL -b $REPO_BRANCH openwrt
-        cd openwrt
-        sed -i 's|https://git.openwrt.org/feed/packages.git|https://github.com/immortalwrt/packages.git|g' feeds.conf.default
-        sed -i 's|https://git.openwrt.org/project/luci.git|https://github.com/immortalwrt/luci.git|g' feeds.conf.default
-        sed -i 's|https://git.openwrt.org/feed/routing.git|https://github.com/openwrt/routing.git|g' feeds.conf.default
-        sed -i 's|https://git.openwrt.org/feed/telephony.git|https://github.com/openwrt/telephony.git|g' feeds.conf.default
 
     - name: cache wrt build
       uses: stupidloud/cachewrtbuild@main
