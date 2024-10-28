@@ -1,11 +1,11 @@
-name: Build OpenWRT-IPQ for AX6
+name: Build OpenWRT-lede for AX6
 
 on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/qosmio/openwrt-ipq
-  REPO_BRANCH: qualcommax-6.x-nss-wifi
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
   CONFIG_FILE: AX6/.config
   DIY_SH: AX6/diy.sh
   FILES: AX6/files
@@ -87,10 +87,15 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive
       run: | 
-        sudo -E apt-get -qq update -y
-        sudo -E apt-get -qq install -y $(curl -fsSL https://raw.githubusercontent.com/nantayo/My-Pkg/master/2305)
-        sudo -E apt-get -qq autoremove --purge
-        sudo -E apt-get -qq clean
+        sudo -E apt update
+        sudo -E apt -y install $(curl -fsSL https://is.gd/depends_ubuntu_2204)
+        sudo -E apt -y autoremove --purge
+        sudo -E apt -y install libfuse-dev
+        sudo -E apt -y install rename
+        sudo -E apt -y install time
+        sudo -E apt -y install gn
+        sudo -E systemctl daemon-reload
+        sudo -E apt clean
         sudo timedatectl set-timezone "$TZ"
         sudo chown $USER:$GROUPS $GITHUB_WORKSPACE
 
