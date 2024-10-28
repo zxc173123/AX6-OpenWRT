@@ -15,9 +15,9 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages packa
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 git clone -b 18.06 --single-branch --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 git clone -b 18.06 --single-branch --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
-git clone -b v6.7.0 --single-branch --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
-git clone -b v5-lua --single-branch --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
-git clone -b v3.35.0 --single-branch --depth 1 https://github.com/sbwml/luci-app-alist package/alist
+#git clone --depth=1 https://github.com/sirpdboy/luci-app-ddns-go package/ddnsgo
+#git clone -b v5-lua --single-branch --depth 1 https://github.com/sbwml/luci-app-mosdns package/mosdns
+#git clone -b v3.35.0 --single-branch --depth 1 https://github.com/sbwml/luci-app-alist package/alist
 #git clone --depth=1 https://github.com/sirpdboy/luci-app-lucky package/lucky
 #git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
 #git clone --depth=1 https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
@@ -35,8 +35,8 @@ rm -rf feeds/packages/net/v2ray-geodata
 rm -rf feeds/packages/utils/v2dat
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-argon-config
-rm -rf feeds/packages/net/mosdns
-rm -rf feeds/luci/applications/luci-app-mosdns
+#rm -rf feeds/packages/net/mosdns
+#rm -rf feeds/luci/applications/luci-app-mosdns
 #rm -rf feeds/luci/themes/luci-theme-design
 #rm -rf feeds/luci/applications/luci-app-design-config
 
