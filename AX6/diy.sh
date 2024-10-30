@@ -31,8 +31,8 @@ git clone -b 18.06 --single-branch --depth 1 https://github.com/jerrykuku/luci-a
 
 # Remove packages
 #删除lean库中的插件，使用自定义源中的包。
-rm -rf feeds/packages/net/v2ray-geodata
-rm -rf feeds/packages/utils/v2dat
+#rm -rf feeds/packages/net/v2ray-geodata
+#rm -rf feeds/packages/utils/v2dat
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/applications/luci-app-argon-config
 #rm -rf feeds/packages/net/mosdns
