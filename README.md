@@ -1,4 +1,5 @@
-基于lean源码
+### 基于lean源码
+- 很纯净，只集成了自己所需的几个插件！wifi信号和cpu的占用都还可以，除QSDK的不二选择！
 ![微信截图_20241031101343](https://github.com/user-attachments/assets/6a580d9a-2fbb-44be-8357-ebc0e7a24af5)
 ![微信截图_20241031101235](https://github.com/user-attachments/assets/3792241a-f5ad-4190-97b2-19c4fd86f936)
 ![微信截图_20241031101249](https://github.com/user-attachments/assets/3f788f67-2879-4396-a0b2-dc9e09d91355)
