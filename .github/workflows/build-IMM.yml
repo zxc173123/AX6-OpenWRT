@@ -145,4 +145,4 @@ jobs:
       if: always()
       with:
         name: AX6-IMM
-        path: openwrt/bin/targets/qualcommax
+        path: openwrt/bin/targets
