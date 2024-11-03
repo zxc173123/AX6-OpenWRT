@@ -23,8 +23,12 @@ function git_sparse_clone() {
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages vlmcsd
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vlmcsd
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-socat
-#git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-openvpn-server
-git clone -b js https://github.com/papagaye744/luci-theme-design package/luci-theme-design
+
+# 替换luci-app-openvpn-server
+rm -rf feeds/luci/applications/luci-app-openvpn-server
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-openvpn-server
+
+# git clone -b js https://github.com/papagaye744/luci-theme-design package/luci-theme-design
 
 #替换luci-app-socat为https://github.com/chenmozhijin/luci-app-socat
 rm -rf feeds/luci/applications/luci-app-socat
