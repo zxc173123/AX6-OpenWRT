@@ -1,14 +1,14 @@
-name: Build OpenWRT-IPQ-1 for AX6
+name: Build OpenWRT-IMM-2 for AX6
 
 on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/fightroad/AX6NSS.git
-  REPO_BRANCH: qualcommax-6.x-nss-wifi
-  CONFIG_FILE: AX6-2/.config
-  DIY_SH: AX6-2/diy.sh
-  FILES: AX6-2/files
+  REPO_URL: https://github.com/immortalwrt/immortalwrt.git
+  REPO_BRANCH: openwrt-23.05
+  CONFIG_FILE: AX6-IMM2/.config
+  DIY_SH: AX6-IMM2/diy.sh
+  FILES: AX6-IMM2/files
   TZ: Asia/Shanghai
 
 jobs:
@@ -103,7 +103,7 @@ jobs:
       uses: stupidloud/cachewrtbuild@main
       with:
         ccache: 'true'
-        mixkey: AX6-nss-${{ env.REPO_BRANCH }}
+        mixkey: AX6-IMM-${{ env.REPO_BRANCH }}
         prefix: ${{ github.workspace }}/openwrt
         
     - name: Update & Install feeds
@@ -144,5 +144,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: ipq807x-nss
-        path: openwrt/bin/targets/qualcommax
+        name: AX6-IMM
+        path: openwrt/bin/targets
