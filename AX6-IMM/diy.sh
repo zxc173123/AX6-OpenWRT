@@ -24,6 +24,11 @@ function git_sparse_clone() {
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-vlmcsd
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-socat
 #git_sparse_clone main https://github.com/kiddin9/kwrt-packages luci-app-openvpn-server
+git clone -b js https://github.com/papagaye744/luci-theme-design package/luci-theme-design
+
+#替换luci-app-socat为https://github.com/chenmozhijin/luci-app-socat
+rm -rf feeds/luci/applications/luci-app-socat
+git_sparse_clone main https://github.com/chenmozhijin/luci-app-socat luci-app-socat
 
 # Remove packages
 #删除lean库中的插件，使用自定义源中的包。
@@ -33,5 +38,11 @@ function git_sparse_clone() {
 #rm -rf feeds/luci/applications/luci-app-mosdns
 
 
-# Default IP
-#sed -i 's/192.168.1.1/192.168.2.2/g' package/base-files/files/bin/config_generate
+
+
+
+#修改默认IP
+#sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
+
+#修改主机名
+sed -i "s/hostname='ImmortalWrt'/hostname='Redmi-AX6'/g" package/base-files/files/bin/config_generate
