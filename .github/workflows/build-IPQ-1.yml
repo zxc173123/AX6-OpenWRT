@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/qosmio/openwrt-ipq
+  REPO_URL: https://github.com/fightroad/AX6NSS.git
   REPO_BRANCH: qualcommax-6.x-nss-wifi
   CONFIG_FILE: AX6-2/.config
   DIY_SH: AX6-2/diy.sh
@@ -103,7 +103,7 @@ jobs:
       uses: stupidloud/cachewrtbuild@main
       with:
         ccache: 'true'
-        mixkey: AX6-1-${{ env.REPO_BRANCH }}
+        mixkey: AX6-nss-${{ env.REPO_BRANCH }}
         prefix: ${{ github.workspace }}/openwrt
         
     - name: Update & Install feeds
@@ -144,5 +144,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: ipq807x
+        name: ipq807x-nss
         path: openwrt/bin/targets/qualcommax
