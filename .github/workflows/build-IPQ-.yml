@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/qosmio/openwrt-ipq
+  REPO_URL: https://github.com/fightroad/AX6NSS.git
   REPO_BRANCH: qualcommax-6.x-nss-wifi
   CONFIG_FILE: AX6-2/.config
   DIY_SH: AX6-2/diy.sh
