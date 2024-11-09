@@ -38,13 +38,14 @@ sed -i 's/services/vpn/g' package/luci-app-openvpn-server/luasrc/view/openvpn/*.
 rm -rf feeds/luci/applications/luci-app-socat
 git_sparse_clone main https://github.com/chenmozhijin/luci-app-socat luci-app-socat
 
-# Remove packages
-#删除lean库中的插件，使用自定义源中的包。
+#删除库中的插件，使用自定义源中的包。
+#rm -rf feeds/luci/themes/luci-theme-argon
+#rm -rf feeds/luci/applications/luci-app-argon-config
+#rm -rf feeds/luci/applications/luci-app-ddns-go
+#rm -rf feeds/packages/net/ddns-go
 #rm -rf feeds/packages/net/alist
 #rm -rf feeds/luci/applications/luci-app-alist
-#rm -rf feeds/packages/net/mosdns
-#rm -rf feeds/luci/applications/luci-app-mosdns
-
+#rm -rf feeds/luci/applications/openwrt-passwall
 
 
 
