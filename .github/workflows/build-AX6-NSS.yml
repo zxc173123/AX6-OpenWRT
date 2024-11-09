@@ -1,14 +1,14 @@
-name: Build OpenWRT-IMM-2 for AX6
+name: Build OpenWRT for AX6-NSS
 
 on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/immortalwrt/immortalwrt.git
-  REPO_BRANCH: openwrt-23.05
-  CONFIG_FILE: AX6-IMM2/.config
-  DIY_SH: AX6-IMM2/diy.sh
-  FILES: AX6-IMM2/files
+  REPO_URL: https://github.com/LiBwrt-op/openwrt-6.x.git
+  REPO_BRANCH: main
+  CONFIG_FILE: AX6-IPQ/.config
+  DIY_SH: AX6-IPQ/diy.sh
+  FILES: AX6-IPQ/files
   TZ: Asia/Shanghai
 
 jobs:
@@ -103,7 +103,7 @@ jobs:
       uses: stupidloud/cachewrtbuild@main
       with:
         ccache: 'true'
-        mixkey: AX6-IMM-${{ env.REPO_BRANCH }}
+        mixkey: AX6-IPQ-${{ env.REPO_BRANCH }}
         prefix: ${{ github.workspace }}/openwrt
         
     - name: Update & Install feeds
@@ -144,5 +144,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: AX6-IMM
+        name: AX6-IPQ
         path: openwrt/bin/targets
