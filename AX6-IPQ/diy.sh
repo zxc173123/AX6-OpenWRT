@@ -32,7 +32,7 @@ git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/l
 #sed -i 's/services/vpn/g' package/luci-app-openvpn-server/luasrc/model/cbi/openvpn-server/*.lua
 #sed -i 's/services/vpn/g' package/luci-app-openvpn-server/luasrc/view/openvpn/*.htm
 
-# git clone -b js https://github.com/papagaye744/luci-theme-design package/luci-theme-design
+git clone -b js https://github.com/papagaye744/luci-theme-design package/luci-theme-design
 
 #替换luci-app-socat为https://github.com/chenmozhijin/luci-app-socat
 rm -rf feeds/luci/applications/luci-app-socat
