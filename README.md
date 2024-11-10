@@ -7,9 +7,9 @@ LEDE显示有nss，但是测试WIFI有问题，内网中上传速度特别慢。
 
 以下两个项目是支持大分区的！
 
-1、LiBwrt：https://github.com/LiBwrt-op/openwrt-6.x.git
+1、LiBwrt：https://github.com/LiBwrt-op/openwrt-6.x.git  build-AX6-IPQ脚本
 
-2、VIKINGYFY： https://github.com/VIKINGYFY/immortalwrt.git
+2、VIKINGYFY： https://github.com/VIKINGYFY/immortalwrt.git  build-AX6-NSS脚本
 
 
 高通OPENWRT其他大佬项目：
