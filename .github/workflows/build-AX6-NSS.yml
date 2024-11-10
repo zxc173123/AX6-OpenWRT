@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_URL: https://github.com/LiBwrt-op/openwrt-6.x.git
+  REPO_URL: https://github.com/VIKINGYFY/immortalwrt.git
   REPO_BRANCH: main
   CONFIG_FILE: AX6-IPQ/.config
   DIY_SH: AX6-IPQ/diy.sh
@@ -144,5 +144,5 @@ jobs:
       uses: actions/upload-artifact@master
       if: always()
       with:
-        name: AX6-IPQ
+        name: AX6-NSS
         path: openwrt/bin/targets
