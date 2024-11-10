@@ -35,8 +35,8 @@ git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config package/l
 git clone -b js https://github.com/papagaye744/luci-theme-design package/luci-theme-design
 
 #替换luci-app-socat为https://github.com/chenmozhijin/luci-app-socat
-#rm -rf feeds/luci/applications/luci-app-socat
-#git_sparse_clone main https://github.com/chenmozhijin/luci-app-socat luci-app-socat
+rm -rf feeds/luci/applications/luci-app-socat
+git_sparse_clone main https://github.com/chenmozhijin/luci-app-socat luci-app-socat
 
 #删除库中的插件，使用自定义源中的包。
 rm -rf feeds/luci/themes/luci-theme-argon
