@@ -14,7 +14,7 @@ LEDE显示有nss，但是测试WIFI有问题，内网中上传速度特别慢。
 
 高通OPENWRT其他大佬项目：
 
-下面的这些项目只支持官方的分区！
+下面的这些项目带nss加速，但是只支持官方的分区！
 
 https://github.com/JiaY-shi/openwrt.git
 
