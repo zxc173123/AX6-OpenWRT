@@ -1,17 +1,18 @@
 ### 自用AX6一键编译脚本
-IMM官方项目没有NSS加速，要编译没有nss加速的是首选！
+- IMM官方项目没有NSS加速，要编译没有nss加速的是首选！
 
-LEDE显示有nss，但是测试WIFI有问题，内网中上传速度特别慢。
+- LEDE显示有nss，但是测试WIFI有问题，内网中上传速度特别慢。
 
-开源驱动支持NSS的项目，都是在官方openwrt上集成了很多大佬的IPQ驱动。
-
-以下两个项目是支持大分区，而且带NSS加速！
+- 以下两个项目是支持大分区，而且带NSS加速！
 
 1、LiBwrt：https://github.com/LiBwrt-op/openwrt-6.x.git build-AX6-IPQ脚本【该项目近期发现nss加速启动不了】
 2、VIKINGYFY： https://github.com/VIKINGYFY/immortalwrt.git build-AX6-NSS脚本【该项目nss加速满血，500m科学跑满cpu占用个位数!】
 
+- 注意：
+nss加速默认是开启的，不要去防火墙里打开系统的硬件或软件卸载加速，会有不可预测的冲突！
+测试只要跑大流量cpu占用很低或没有就是NSS加速在起作用了！
 
-高通OPENWRT其他大佬项目：
+- 高通OPENWRT其他大佬项目：
 
 下面的这些项目带nss加速，但是只支持官方的分区！
 
@@ -20,5 +21,6 @@ https://github.com/JiaY-shi/openwrt.git
 https://github.com/qosmio/openwrt-ipq.git
 
 https://github.com/King-Of-Knights/openwrt-6.x.git
-![微信截图_20241111142204](https://github.com/user-attachments/assets/ae453a7e-aa5b-4355-9ca8-7bb192664fb6)
-![微信截图_20241111142223](https://github.com/user-attachments/assets/24657fcb-89b0-411f-b159-d5754f648502)
+
+![微信截图_20241116071934](https://github.com/user-attachments/assets/617a2d49-0f51-485c-a20a-b25cde5a8e82)
+![微信截图_20241116071804](https://github.com/user-attachments/assets/502012e5-83d0-4e4b-be8b-a53c1edd0f8b)
